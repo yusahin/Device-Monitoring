@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Device Monitoring</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+</head>
+<body>
+<div class="container my-2" align="center">
+
+<h3>Device Monitoring</h3>
+<a th:href="@{/refresh}" class="btn btn-primary btn-sm mb-3" >refresh</a>
+	<table style="width:105%" border="2"
+		class = "table table-striped table-responsive-md">
+	<thead>
+<tr>
+	<th style="width:15%">Device Name</th>
+	<th style="width:15%">Device ID</th>
+	<th style="width:15%">Status</th>
+	<th style="width:20%">Register Count</th>
+	<th style="width:20%">Health Check Count</th>
+	<th style="width:20%">Critical Alert Count</th>
+	
+</tr>
+</thead>
+<tbody>
+<tr th:each="metric:${allDeviceMetrics}">
+		<td th:text="${metric.deviceName}"></td>
+		<td th:text="${metric.deviceId}"></td>
+		<td th:text="${metric.deviceStatus}"></td>
+		<td th:text="${metric.deviceRegisterRequestCount}"></td>
+		<td th:text="${metric.deviceCheckHealthCount}"></td>
+		<td th:text="${metric.deviceAlertCount}"></td>
+	
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>
