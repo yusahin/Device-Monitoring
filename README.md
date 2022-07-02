@@ -1,2 +1,3 @@
 # Device-Monitoring
-This repo is abstract Device Monitoring tool
+This device-monitoring consists of two modules. 
+First module generates virtual devices. Second module monitor these devices info and metrics
