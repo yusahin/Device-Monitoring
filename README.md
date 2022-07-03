@@ -21,18 +21,18 @@ Monitoring-Server is based on spring-boot project and `localhost:7070`.
 %% Example of sequence diagram
   sequenceDiagram
 Device.X->>MonitoringServer: REGISTER ( DMessage )
-MonitoringServer->>Device.X: REGISTER SUCESS
+MonitoringServer->>Device.X: REGISTER SUCCESS
 Device.X->>MonitoringServer: HEALTH_CHECK ( DMessage )
 Device.X->>MonitoringServer: HEALTH_CHECK ( DMessage )
 Device.X->>MonitoringServer: HEALTH_CHECK ( DMessage )
 
 Device.X->>MonitoringServer: ALERT ( DMessage )
-MonitoringServer->>Device.X: ALERT SUCESS
+MonitoringServer->>Device.X: ALERT SUCCESS
 Device.X->>MonitoringServer: HEALTH_CHECK ( DMessage )
 Device.X->>MonitoringServer: HEALTH_CHECK ( DMessage )
 
 Device.X->>MonitoringServer: ALERT ( DMessage )
-MonitoringServer->>Device.X: ALERT SUCESS
+MonitoringServer->>Device.X: ALERT SUCCESS
 ```
 
 ![image](https://user-images.githubusercontent.com/32652047/177052290-4560d598-ff49-46b9-9d54-b5e655ed8e48.png)
